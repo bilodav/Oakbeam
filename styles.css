@@ -346,3 +346,91 @@ p, body {
     1px 1px 12px rgba(0, 0, 0, 0.7);
 }
 
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;                  
+  justify-content: space-evenly;   
+  align-items: center;            
+  background-color: var(--bg-secondary); 
+
+  padding: 1rem 3rem;               /* breathing room on sides – adjust as needed */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left brand / logo area */
+.nav-left {
+  flex-shrink: 0;                   /* don't let it shrink */
+}
+
+.nav-left .brand {
+  font-family: var(--font-heading); /* or keep --font-body if preferred */
+  font-weight: var(--font-weight-bold);
+  font-size: 2rem;
+  color: var(--text-secondary);                     /* change to var(--text-white) */
+  padding: 0;                       /* cleaner look */
+}
+
+/* Center menu items */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;                 
+  margin: 0;                        
+  padding: 0;
+  list-style: none;
+}
+
+.nav-center li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.15rem;
+  transition: color var(--transition-base);
+}
+
+.nav-center li a:hover,
+.nav-center li a:focus {
+  color: var(--color-accent);       
+}
+
+/* Right side – Contact Us */
+.nav-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.nav-right span a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: 1.15rem;
+}
+
+
+.btn-outline-nav {
+  background-color: var(--btn-outline-bg);
+  color: var(--text-secondary);
+  border: 2px solid var(--btn-outline-border);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-outline-nav:hover {
+  background-color: var(--btn-outline-hover-bg);
+  color: var(--text-white);
+}
+
+
+ 

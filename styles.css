@@ -198,6 +198,11 @@ p, body {
   color: var(--text-secondary);
 }
 
+body{
+  background-color: var(--color-light);
+
+}
+
 /* Text Selection */
 ::selection {
   background-color: var(--selection-bg);
@@ -288,7 +293,7 @@ p, body {
 .parallax-container{
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: 91.5vh;
 
 }
 
@@ -347,25 +352,30 @@ p, body {
 }
 
 nav {
-  position: absolute;
-  bottom: 0;
+  position: sticky;
+  top: 0vh;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   display: flex;                  
   justify-content: space-evenly;   
   align-items: center;            
   background-color: var(--bg-secondary); 
 
-  padding: 1rem 3rem;               /* breathing room on sides – adjust as needed */
+  padding: 0.5rem 3rem;               /* breathing room on sides – adjust as needed */
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
   width: 100%;
   box-sizing: border-box;
+  
 }
 
 /* Left brand / logo area */
 .nav-left {
   flex-shrink: 0;                   /* don't let it shrink */
+}
+
+.nav-left a {
+  text-decoration: none;
 }
 
 .nav-left .brand {
@@ -432,19 +442,76 @@ nav {
   color: var(--text-white);
 }
 
+#services{
+   height:100vh;
+}
 
-#services h3{
+#services h3:first-of-type{
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4.5rem;
   margin-bottom: 0px;
   letter-spacing: 0.4rem;
 }
 
 #services h2{
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0px;
-  letter-spacing: 0.4rem;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5rem;
 }
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 80%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.services-card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  min-height: 70vh;
+  min-width: 30%;
+  cursor: pointer;
+}
+
+.services-card:nth-of-type(1){
+  
+    background-image: url("./public/images/engineering_card.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.services-card:nth-of-type(2){
+    background-image: url("./public/images/architecture_card.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.services-card:nth-of-type(3){
+    background-image: url("./public/images/construction_card.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#services .services-card h3{
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-shadow: 
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    4px 4px 16px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    align-self: flex-start;
+    margin-top: 1.2rem;
+}
+
 
  

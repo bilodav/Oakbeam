@@ -447,6 +447,19 @@ nav {
 
 
 
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: green;} */
+
+ #services{
+   min-height:100vh;
+}
+
 #services h3:first-of-type{
   text-align: center;
   margin-top: 4.5rem;
@@ -464,6 +477,7 @@ nav {
 
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 80%;
   margin: 0 auto;
@@ -476,7 +490,7 @@ nav {
   border-radius: var(--radius-lg);
   padding: 1rem;
   min-height: 70vh;
-  min-width: 30%;
+  min-width: 90%;
   cursor: pointer;
 }
 
@@ -485,6 +499,7 @@ nav {
     background-image: url("./public/images/engineering_card.jpg");
     background-size: cover;
     background-position: center;
+    
     
 }
 
@@ -513,39 +528,54 @@ nav {
     align-self: flex-start;
     margin-top: 1.2rem;
 }
-
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
- body {background-color: green;}
- #services{
-   height:100vh;
-}
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
- body {background-color: rgb(71, 17, 195);}
+ /* body {background-color: rgb(71, 17, 195);} */
+ .services-card{
+  min-width: 40%;
+
+}
+
+#services .services-card h3{
+    font-size: 2.0rem;
+}
   
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
- body {background-color: rgb(242, 118, 192);}
-  
+ /* body {background-color: rgb(242, 118, 192);} */
+ .card-container {
+  margin: auto;
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+}
+   .services-card{
+  min-width: 30%;
+
+}
+
+#services .services-card h3{
+    font-size: 2.5rem;
+}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
  body {background-color: rgb(101, 217, 233);}
   
-}
+} */
 
 /* Extra extra large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
  body {background-color: rgb(144, 111, 221);}
-  /* Your styles here */
-}
+  
+} */
 
 #about-us {
   min-height: 300vh;;

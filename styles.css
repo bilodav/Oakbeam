@@ -565,50 +565,39 @@ nav {
 }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {
- body {background-color: rgb(101, 217, 233);}
-  
-} */
+/* ABOUT US SECTION STYLING */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/* Extra extra large devices (larger desktops, 1400px and up) */
-/* @media (min-width: 1400px) {
- body {background-color: rgb(144, 111, 221);}
-  
-} */
 
-#about-us {
-  min-height: 300vh;;
-}   
-
-#about-us h2{
-  width: 50%;
-  font-size: 4.5rem;
-  margin: 3rem auto 4rem 14rem;
-}
-
-.card-grid-about-us{
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: rgba(117, 161, 117, 0.484);} */
+    #about-us {
+      min-height: 300vh;;
+    }   
+    #about-us h2{
+      width: 75%;
+      font-size: 2.8rem;
+      margin: 6rem auto
+    }
+    
+    .card-grid-about-us{
   display: grid;
-  grid-template-columns: 40% 40% ;
-  grid-template-rows: 100vh 100vh 100vh;
+  grid-template-columns: 80%;
+  grid-template-rows: 50vh 50vh 100vh 50vh 50vh;
   gap: 9px;
   justify-content: center;
+  }
 
-
-}
-
-.about-us-card{
+  .about-us-card{
   box-sizing: border-box;
   height: 100%;
   width: 100%;
   border-radius: var(--radius-lg);
   padding: 1rem;
-  
- 
-}
+  }
 
-.about-us-card:nth-of-type(1){
-  grid-column-start: 1;
+  .about-us-card:nth-of-type(1){
   background-image: url("./public/images/enduring_design.jpg");
   background-size: cover;
    background-position: center;
@@ -616,7 +605,6 @@ nav {
 }
 
 .about-us-card:nth-of-type(2){
-  grid-column-start: 2;
   background-image: url("./public/images/construction.jpg");
   background-size: cover;
    background-position: center;
@@ -628,14 +616,13 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 8rem;
+  padding: 5rem;
 }
 
 
 
 
 .about-us-card:nth-of-type(4){
-  grid-column-start: 2;
   background-image: url("./public/images/signature_architecture.jpg");
   background-size: cover;
    background-position: center;
@@ -645,7 +632,6 @@ nav {
 
 .about-us-card:nth-of-type(5){
   width: 100%;
-  grid-column: 1/3;
   background-image: url("./public/images/transforming_landscapes.jpg");
   background-size: cover;
    background-position: center;
@@ -676,9 +662,330 @@ nav {
   /* Add any other specific styles for the 3rd card's h3 here */
   color: var(--text-primary);
   text-shadow: none; 
+} 
+
 }
 
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+ /* body {background-color: rgba(70, 17, 195, 0.245);} */
+  #about-us h2{
+  width: 60%;
+  font-size: 3.5rem;
+  margin: 3rem 0 4rem 8rem;
+}
 
+.card-grid-about-us{
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 75vh 75vh 75vh;
+
+  }
+
+
+.about-us-card:nth-of-type(3){
+  padding: 2rem;
+}
+
+
+.about-us-card:nth-of-type(5){
+  grid-column: 1/3;
+
+}
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ /* body {background-color: rgba(242, 118, 192, 0.355);} */
+  #about-us h2{
+  width: 60%;
+  font-size: 4.0rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+.card-grid-about-us{
+  grid-template-rows: 100vh 100vh 100vh;
+
+  }
+
+
+.about-us-card:nth-of-type(3){
+  padding: 6rem;
+}
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+ /* body {background-color: rgba(101, 220, 233, 0.268);} */
+  #about-us h2{
+  width: 50%;
+  font-size: 4.5rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+.about-us-card:nth-of-type(3){
+  padding: 8rem;
+}
+ } 
+
+
+/* PAST PROJECTS SECTION STYLING */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: rgba(117, 161, 117, 0.484);} */
+    #past-projects {
+      min-height: 200vh;;
+    }   
+    #past-projects h2{
+      width: 75%;
+      font-size: 2.8rem;
+      margin: 6rem auto
+    }
+    
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+ /* body {background-color: rgba(70, 17, 195, 0.245);} */
+  #past-projects h2{
+  width: 60%;
+  font-size: 3.5rem;
+  margin: 3rem 0 4rem 8rem;
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ /* body {background-color: rgba(242, 118, 192, 0.355);} */
+  #past-projects h2{
+  width: 60%;
+  font-size: 4.0rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+ /* body {background-color: rgba(101, 220, 233, 0.268);} */
+  #past-projects h2{
+  width: 50%;
+  font-size: 4.5rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+ } 
+
+ /* news SECTION STYLING */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: rgba(117, 161, 117, 0.484);} */
+    #news {
+      min-height: 200vh;;
+    }   
+    #news h2{
+      width: 75%;
+      font-size: 2.8rem;
+      margin: 6rem auto
+    }
+    
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+ /* body {background-color: rgba(70, 17, 195, 0.245);} */
+  #news h2{
+  width: 60%;
+  font-size: 3.5rem;
+  margin: 3rem 0 4rem 8rem;
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ /* body {background-color: rgba(242, 118, 192, 0.355);} */
+  #news h2{
+  width: 60%;
+  font-size: 4.0rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+ /* body {background-color: rgba(101, 220, 233, 0.268);} */
+  #news h2{
+  width: 50%;
+  font-size: 4.5rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+ } 
+
+/* building-tracker SECTION STYLING */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: rgba(117, 161, 117, 0.484);} */
+    #building-tracker {
+      min-height: 200vh;;
+    }   
+    #building-tracker h2{
+      width: 75%;
+      font-size: 2.8rem;
+      margin: 6rem auto
+    }
+    
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+ /* body {background-color: rgba(70, 17, 195, 0.245);} */
+  #building-tracker h2{
+  width: 60%;
+  font-size: 3.5rem;
+  margin: 3rem 0 4rem 8rem;
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ /* body {background-color: rgba(242, 118, 192, 0.355);} */
+  #building-tracker h2{
+  width: 60%;
+  font-size: 4.0rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+ /* body {background-color: rgba(101, 220, 233, 0.268);} */
+  #building-tracker h2{
+  width: 50%;
+  font-size: 4.5rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+ } 
+
+
+ /* contact-us SECTION STYLING */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: rgba(117, 161, 117, 0.484);} */
+    #contact-us {
+      min-height: 200vh;;
+    }   
+    #contact-us h2{
+      width: 75%;
+      font-size: 2.8rem;
+      margin: 6rem auto
+    }
+    
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+ /* body {background-color: rgba(70, 17, 195, 0.245);} */
+  #contact-us h2{
+  width: 60%;
+  font-size: 3.5rem;
+  margin: 3rem 0 4rem 8rem;
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ /* body {background-color: rgba(242, 118, 192, 0.355);} */
+  #contact-us h2{
+  width: 60%;
+  font-size: 4.0rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+ /* body {background-color: rgba(101, 220, 233, 0.268);} */
+  #contact-us h2{
+  width: 50%;
+  font-size: 4.5rem;
+  margin: 3rem auto 4rem 14rem;
+}
+
+ } 
+
+
+
+
+
+
+
+
+
+ /* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 176px) { */
+ /* body {background-color: green;} */
 
  
+/* } */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { */
+ /* body {background-color: rgb(71, 17, 195);} */
+
+/* } */
+  
+
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { */
+ /* body {background-color: rgb(242, 118, 192);} */
+
+/* } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+ body {background-color: rgb(101, 217, 233);}
+  
+} */
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {
+ body {background-color: rgb(144, 111, 221);}
+  
+} */

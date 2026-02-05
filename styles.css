@@ -669,9 +669,14 @@ nav {
 /* Separate styling for h3 in the 3rd card */
 .about-us-card:nth-of-type(3) h3 {
   font-size: 2.5rem;
-  /* Add any other specific styles for the 3rd card's h3 here */
+  font-size: 6vh;
   color: var(--text-primary);
   text-shadow: none; 
+} 
+
+/* Separate styling for p in the 3rd card */
+.about-us-card:nth-of-type(3) p {
+  font-size: 80%;
 } 
 
 }
@@ -695,6 +700,7 @@ nav {
 
 .about-us-card:nth-of-type(3){
   padding: 2rem;
+
 }
 
 

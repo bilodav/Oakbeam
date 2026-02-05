@@ -968,7 +968,28 @@ nav {
 
 
 
+/* Scroll reveal animation for H2 text */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+.scroll-reveal  span{
+  color: hsla(0, 13%, 9%, 0.1);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, var(--text-primary), var(--text-primary));
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover 20vw;
+  animation-range-end: cover 50vw;
+
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+  
+}
 
 
 

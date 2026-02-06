@@ -44,6 +44,10 @@ table {
 	border-spacing: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* ROOT STYLING */
 
 :root {
@@ -455,6 +459,22 @@ nav {
   color: var(--text-white);
 }
 
+.hidden {
+  display: none;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 40px;
+}
+
+.burger-menu > span {
+  display: block;
+}
 
 
 

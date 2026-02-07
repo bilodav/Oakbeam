@@ -459,9 +459,7 @@ nav {
   color: var(--text-white);
 }
 
-.hidden {
-  display: none;
-}
+
 
 .burger-menu {
   display: flex;
@@ -469,14 +467,36 @@ nav {
   align-items: center;
   justify-content: center;
   width: 30px;
-  height: 40px;
+  height: auto;
+  gap:4px;
 }
 
 .burger-menu > span {
+  margin: 0;
+  padding: 0;
   display: block;
+  line-height: 0;
 }
 
+.burger-menu > span {
+  margin: 0;
+  padding: 0;
+  display: block;
+  transition: all 0.3s ease;
+}
 
+/* Animation for X state */
+.burger-menu.active > span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger-menu.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active > span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
 
 
 
@@ -1011,6 +1031,9 @@ nav {
   
 }
 
+.hidden {
+  display: none;
+}
 
 
 

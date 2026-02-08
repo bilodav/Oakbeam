@@ -11,6 +11,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const finalScale = Math.max(scale, 1);
     
     parallax.style.transform = `translateY(${translateY}px) scale(${finalScale})`;
+
+    updateActiveSection();
 });
 
 // Use requestAnimationFrame for smoother animation
@@ -30,6 +32,8 @@ window.addEventListener("scroll", () => {
             const finalScale = Math.max(scale, 1);
             
             parallax.style.transform = `translateY(${translateY}px) scale(${finalScale})`;
+
+            updateActiveSection()
             
             ticking = false;
         });
@@ -82,3 +86,53 @@ burgerMenu.addEventListener("click", ()=>{
         burgerMenu.classList.remove("active");
     }
 } )
+
+function updateActiveSection(){
+    // Get all the sections
+    const sections = document.querySelectorAll("section[id]");
+
+    // Get all nav links
+    const navLinks = document.querySelectorAll(".nav-center a[href^='#']");
+
+    // Get current scroll position
+    const scrollPosition = window.scrollY + 150;
+
+    let currentSection = "";
+
+    // Determine which section is currently in view
+    sections.forEach(section => {
+        const  sectionTop = section.offsetTop ;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop +sectionHeight){
+            currentSection = section.getAttribute("id")
+        }
+    })
+
+    // If at the very top of page, highlight home
+    if (window.scrollY < 100 ){
+        currentSection = "home-banner"
+    }
+
+    //update of active class on nav links
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        const href = link.getAttribute("href");
+        if (href === `#${currentSection}`){
+            link.classList.add("active")
+        }
+    })
+}
+
+// Optional: Smooth scroll enhancement (already have scroll-behavior: smooth in CSS)
+// But this adds a click handler to update immediately
+document.querySelectorAll('.nav-center a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Remove active from all links
+        document.querySelectorAll('.nav-center a').forEach(l => l.classList.remove('active'));
+        // Add active to clicked link
+        this.classList.add('active');
+    });
+});

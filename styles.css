@@ -427,6 +427,11 @@ nav {
   color: var(--color-accent);       
 }
 
+/* Active state for current section */
+.nav-center li a.active {
+  color: var(--color-accent);
+}
+
 /* Right side – Contact Us */
 .nav-right {
   flex-shrink: 0;

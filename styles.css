@@ -799,7 +799,7 @@ nav {
 
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 176px) {
- /* body {background-color: rgba(117, 161, 117, 0.484);} */
+ body {background-color: rgba(117, 161, 117, 0.484);}
     #past-projects {
       min-height: 200vh;;
     }   
@@ -808,6 +808,56 @@ nav {
       font-size: 2.8rem;
       margin: 6rem auto
     }
+
+    .pp-flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+  }
+
+  .pp-card{
+    border: 1px solid black;
+    border-radius: var(--radius-md);
+    height: 20vh;
+    width:99%;
+  }
+
+  .pp-card.active{
+    border: 1px solid black;
+    border-radius: var(--radius-md);
+    height: 110vh;
+    width:99%;
+  }
+
+  .pp-card:nth-of-type(1){
+    background-image: url("./public/images/design_1.jpg");
+    background-size: cover;
+   background-position: center;
+  }
+  .pp-card:nth-of-type(2){
+    background-image: url("./public/images/design_2.jpg");
+    background-size: cover;
+   background-position: center;
+  }
+  .pp-card:nth-of-type(3){
+    background-image: url("./public/images/design_3.jpg");
+    background-size: cover;
+   background-position: center;
+  }
+  .pp-card:nth-of-type(4){
+    background-image: url("./public/images/design_4.jpg");
+    background-size: cover;
+   background-position: center;
+  }
+  .pp-card:nth-of-type(5){
+    background-image: url("./public/images/design_5.jpg");
+    background-size: cover;
+   background-position: center;
+  }
     
 
 }
@@ -815,7 +865,7 @@ nav {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
- /* body {background-color: rgba(70, 17, 195, 0.245);} */
+ body {background-color: rgba(70, 17, 195, 0.245);}
   #past-projects h2{
   width: 60%;
   font-size: 3.5rem;
@@ -827,7 +877,7 @@ nav {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
- /* body {background-color: rgba(242, 118, 192, 0.355);} */
+ body {background-color: rgba(242, 118, 192, 0.355);}
   #past-projects h2{
   width: 60%;
   font-size: 4.0rem;
@@ -1040,61 +1090,7 @@ nav {
   display: none;
 }
 
-/* PAST_PROJECTS STYLING */
 
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 176px) {
- body {background-color: rgba(152, 216, 152, 0.399);}
-  .pp-flex-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-
-  }
-
-  .pp-card{
-    border: 1px solid black;
-    border-radius: var(--radius-md);
-    height: 20vh;
-    width:99%;
-  }
-
-  .pp-card:nth-of-type(1){
-    background-image: url("./public/images/design_1.jpg");
-    background-size: cover;
-   background-position: center;
-  }
-  .pp-card:nth-of-type(2){
-    background-image: url("./public/images/design_2.jpg");
-    background-size: cover;
-   background-position: center;
-  }
-  .pp-card:nth-of-type(3){
-    background-image: url("./public/images/design_3.jpg");
-    background-size: cover;
-   background-position: center;
-  }
-  .pp-card:nth-of-type(4){
-    background-image: url("./public/images/design_4.jpg");
-    background-size: cover;
-   background-position: center;
-  }
-  .pp-card:nth-of-type(5){
-    background-image: url("./public/images/design_5.jpg");
-    background-size: cover;
-   background-position: center;
-  }
- 
- }
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
- body {background-color: rgba(70, 17, 195, 0.232);}
-
-}
   
 
 

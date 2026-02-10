@@ -136,3 +136,29 @@ document.querySelectorAll('.nav-center a[href^="#"]').forEach(link => {
         this.classList.add('active');
     });
 });
+
+
+// Past projects card opening
+
+const ppbuttonOpen =  document.querySelectorAll(".pp-open");
+const ppbuttonClose =  document.querySelectorAll(".pp-close");
+
+for( let i = 0 ; i < ppbuttonClose.length ; i++){
+    ppbuttonClose.addEventListener("click", ()=>{
+        ppbuttonClose.textContent="V";
+        document.querySelectorAll(".pp-card")[i].classList.remove("active");
+        ppbuttonClose.classList.add("pp-open");
+        ppbuttonClose.classList.add("pp-close");
+    })
+}
+
+for( let i = 0 ; i < ppbuttonOpen.length ; i++){
+    ppbuttonOpen.addEventListener("click", ()=>{
+        ppbuttonClose.textContent="X";
+        document.querySelectorAll(".pp-card")[i].classList.add("active");
+        ppbuttonClose.classList.add("pp-open");
+        ppbuttonClose.classList.add("pp-close");
+    })
+}
+
+

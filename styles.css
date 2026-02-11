@@ -815,7 +815,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
   }
 
@@ -825,6 +825,34 @@ nav {
     height: 20vh;
     width:99%;
   }
+
+  .pp-button {
+  background-color: rgba(201, 169, 97, 0.9); /* Your gold accent */
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.pp-button:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pp-button-icon {
+  stroke: var(--color-white);
+  transition: transform var(--transition-base);
+}
+
+.pp-button.active .pp-button-icon {
+  transform: rotate(180deg); /* For chevron animation */
+}
 
   .pp-card.active{
     border: 1px solid black;
@@ -883,6 +911,27 @@ nav {
   font-size: 4.0rem;
   margin: 3rem auto 4rem 14rem;
 }
+
+.pp-flex-container{
+
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    width: 99%;
+    height: 100vh;
+    margin: 0 auto;
+
+  }
+
+  .pp-card{
+    height: 90vh;
+    width: 20%;
+  }
+
+  .pp-card.active{
+    width:70%;
+    height: 90vh;
+  }
 
 }
 

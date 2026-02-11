@@ -140,25 +140,27 @@ document.querySelectorAll('.nav-center a[href^="#"]').forEach(link => {
 
 // Past projects card opening
 
-const ppbuttonOpen =  document.querySelectorAll(".pp-open");
-const ppbuttonClose =  document.querySelectorAll(".pp-close");
+const ppButton =  document.querySelectorAll(".pp-button");
 
-for( let i = 0 ; i < ppbuttonClose.length ; i++){
-    ppbuttonClose.addEventListener("click", ()=>{
-        ppbuttonClose.textContent="V";
-        document.querySelectorAll(".pp-card")[i].classList.remove("active");
-        ppbuttonClose.classList.add("pp-open");
-        ppbuttonClose.classList.add("pp-close");
+for(let i = 0; i < ppButton.length; i++){
+    ppButton[i].addEventListener("click", ()=>{
+        const card = document.querySelectorAll(".pp-card")[i];
+        const allCards = document.querySelectorAll(".pp-card");
+        const allButtons = document.querySelectorAll(".pp-button");
+        
+        // Check if the clicked card is already active
+        if (card.classList.contains("active")) {
+            // If yes, just close it
+            card.classList.remove("active");
+            ppButton[i].classList.remove("active");
+        } else {
+            // If no, close all other cards first
+            allCards.forEach(c => c.classList.remove("active"));
+            allButtons.forEach(b => b.classList.remove("active"));
+            
+            // Then open the clicked card
+            card.classList.add("active");
+            ppButton[i].classList.add("active");
+        }
     })
 }
-
-for( let i = 0 ; i < ppbuttonOpen.length ; i++){
-    ppbuttonOpen.addEventListener("click", ()=>{
-        ppbuttonClose.textContent="X";
-        document.querySelectorAll(".pp-card")[i].classList.add("active");
-        ppbuttonClose.classList.add("pp-open");
-        ppbuttonClose.classList.add("pp-close");
-    })
-}
-
-

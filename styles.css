@@ -820,7 +820,10 @@ nav {
   }
 
   .pp-card{
+    display: grid;
+    grid-template-columns:repeat(8,1fr);
 
+    grid-template-rows: repeat(20,1fr);
     border-radius: var(--radius-md);
     height: 20vh;
     width:99%;
@@ -828,6 +831,7 @@ nav {
 
   .pp-button {
   background-color: rgba(201, 169, 97, 0.9); /* Your gold accent */
+  grid-column-start: 8;
   border: none;
   border-radius: var(--radius-md);
   padding: 0.75rem;
@@ -838,6 +842,7 @@ nav {
   justify-content: center;
   box-shadow: var(--shadow-md);
 }
+
 
 .pp-button:hover {
   background-color: var(--color-accent-dark);
@@ -852,6 +857,16 @@ nav {
 
 .pp-button.active .pp-button-icon {
   transform: rotate(180deg); /* For chevron animation */
+}
+
+.pp-item{
+  grid-area: 10/1/11/3;
+  color: white
+}
+
+.pp-description{
+  grid-area: 10/5/11/8;
+  color: white
 }
 
   .pp-card.active{

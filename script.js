@@ -163,6 +163,10 @@ for(let i = 0; i < ppButton.length; i++){
             // If no, close all other cards first
             allCards.forEach(c => c.classList.remove("active"));
             allButtons.forEach(b => b.classList.remove("active"));
+            ppItem.forEach(b => b.classList.add("hidden"));
+            ppDescription.forEach(b => b.classList.add("hidden"));
+
+
             
             // Then open the clicked card
             card.classList.add("active");

@@ -1024,14 +1024,94 @@ nav {
 @media (min-width: 176px) {
  /* body {background-color: rgba(117, 161, 117, 0.484);} */
     #news {
-      min-height: 200vh;;
+      min-height: 100vh;;
     }   
     #news h2{
       width: 75%;
       font-size: 2.8rem;
       margin: 6rem auto
     }
-    
+    .card-grid-news{
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: 50vh 50vh 50vh 50vh;
+  gap: 9px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 65%;
+  }
+
+  .news-card{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  }
+
+  .news-card:nth-of-type(1){
+  padding: 0;
+  overflow: hidden;
+  position: relative; /* Add this */
+}
+
+.news-card:nth-of-type(1) > video{
+  position: absolute; /* Add this */
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;  
+  border-radius: var(--radius-lg); 
+}
+
+.news-card:nth-of-type(2){
+  background-image: url("./public/images/construction.jpg");
+  background-size: cover;
+   background-position: center;
+  
+}
+
+.news-card:nth-of-type(3){
+  background-image: url("./public/images/lake_house.jpg");
+  background-size: cover;
+   background-position: center;
+}
+
+
+
+.news-card:nth-of-type(4){
+  background-image: url("./public/images/signature_architecture.jpg");
+  background-size: cover;
+   background-position: center;
+   
+  
+}
+
+
+
+/* Style h3 and h4 in all cards EXCEPT the 3rd card */
+.news-card h3,
+.news-card h4 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-shadow: 
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    4px 4px 16px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
 
 }
 
@@ -1044,7 +1124,36 @@ nav {
   font-size: 3.5rem;
   margin: 3rem 0 4rem 8rem;
 }
+.card-grid-news{
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 55vh 55vh;
+  gap: 9px;
 
+  }
+
+
+  
+  
+  .news-card:nth-of-type(1){
+    grid-area: 1/1/2/8;
+    
+  }
+
+  .news-card:nth-of-type(2){
+    grid-area: 1/8/1/13;
+    
+  }
+  
+  .news-card:nth-of-type(3){
+    grid-area: 2/1/2/6;
+  
+  }
+
+  .news-card:nth-of-type(4){
+    padding: 2rem;
+    grid-area: 2/6/2/13;
+  
+  }
 
 }
 
@@ -1056,6 +1165,11 @@ nav {
   font-size: 4.0rem;
   margin: 3rem auto 4rem 14rem;
 }
+
+
+
+
+
 
 }
 

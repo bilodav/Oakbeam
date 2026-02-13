@@ -827,9 +827,25 @@ nav {
     border-radius: var(--radius-md);
     height: 20vh;
     width:99%;
+    position:relative;
+  }
+
+  .pp-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: var(--radius-md);
+    pointer-events: none;
+    z-index: 0;
   }
 
   .pp-button {
+    position: relative;
+    z-index: 1;
   background-color: rgba(201, 169, 97, 0.9); /* Your gold accent */
   grid-column-start: 8;
   border: none;
@@ -859,15 +875,49 @@ nav {
   transform: rotate(180deg); /* For chevron animation */
 }
 
-.pp-item{
-  grid-area: 10/1/11/3;
-  color: white
+.pp-details{
+  z-index: 1;
+  margin: 0 auto;
+  grid-area: 10/1/20/9;
+  color: var(--text-white);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5,1fr);
+ 
+  
 }
 
-.pp-description{
-  grid-area: 10/5/11/8;
-  color: white
+/* Labels - narrower */
+.pp-item:nth-of-type(1){
+  grid-area: 2/1/3/2;  /* 1 column */
+  padding-left: 15%;
 }
+
+.pp-item:nth-of-type(3){
+  grid-area: 3/1/4/2;  /* 1 column */
+  padding-left: 15%;
+}
+
+.pp-item:nth-of-type(5){
+  grid-area: 4/1/5/2;  /* 1 column */
+  padding-left: 15%;
+}
+
+/* Descriptions - wider for text wrapping */
+.pp-description:nth-of-type(2){
+  grid-area: 2/3/3/7;  /* 5 columns - plenty of room */
+
+}
+
+.pp-description:nth-of-type(4){
+  grid-area: 3/3/4/7;  /* 5 columns */
+}
+
+.pp-description:nth-of-type(6){
+  grid-area: 4/3/5/7;  /* 5 columns */
+}
+
+
 
   .pp-card.active{
     border: 1px solid black;
@@ -875,6 +925,11 @@ nav {
     height: 110vh;
     width:99%;
   }
+
+  .pp-card.active::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 
   .pp-card:nth-of-type(1){
     background-image: url("./public/images/design_1.jpg");

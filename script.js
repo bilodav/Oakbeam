@@ -147,7 +147,7 @@ for(let i = 0; i < ppButton.length; i++){
         const card = document.querySelectorAll(".pp-card")[i];
         const allCards = document.querySelectorAll(".pp-card");
         const allButtons = document.querySelectorAll(".pp-button");
-        const ppItem = document.querySelectorAll(".pp-item");
+        const ppDetails = document.querySelectorAll(".pp-details");
         const ppDescription = document.querySelectorAll(".pp-description");
 
 
@@ -157,22 +157,21 @@ for(let i = 0; i < ppButton.length; i++){
             // If yes, just close it
             card.classList.remove("active");
             ppButton[i].classList.remove("active");
-            ppItem[i].classList.add("hidden");
-            ppDescription[i].classList.add("hidden");
+            ppDetails[i].classList.add("hidden");
+            
         } else {
             // If no, close all other cards first
             allCards.forEach(c => c.classList.remove("active"));
             allButtons.forEach(b => b.classList.remove("active"));
-            ppItem.forEach(b => b.classList.add("hidden"));
-            ppDescription.forEach(b => b.classList.add("hidden"));
+            ppDetails.forEach(b => b.classList.add("hidden"));
+
 
 
             
             // Then open the clicked card
             card.classList.add("active");
             ppButton[i].classList.add("active");
-            ppItem[i].classList.remove("hidden");
-            ppDescription[i].classList.remove("hidden");
+            ppDetails[i].classList.remove("hidden");
         }
     })
 }

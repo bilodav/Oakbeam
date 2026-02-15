@@ -518,14 +518,52 @@
             >
           </h2>
         </div>
+        <div class="contact-us-container">
+          <h3>Need a consult, Fill out your details below</h3>
+          <div class="contact-us-details">
+            <label for="name"> Full Name: </label>
+            <input id="name" name="name" type="text" required />
+            <label for="email"> Email </label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="example@email.com"
+              required
+            />
+            <label for="contact-number"> Contact Number </label>
+            <input name="contact-number" id="contact-number" type="text" />
+            <label for="service-type"> Service Interested In </label>
+            <select name="service-type" id="service-type" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="civil-engineering">Civil Engineering</option>
+              <option value="architectural-design">Architectural Design</option>
+              <option value="construction">Construction</option>
+              <option value="house-inspections">House Inspections</option>
+              <option value="general-inquiry">General Inquiry</option>
+            </select>
 
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-            quibusdam aliquam perferendis, repellendus voluptatibus, suscipit
-            fuga velit saepe doloribus amet expedita, quis vel minima
-            cupiditate. Praesentium repudiandae quam dolorem modi!
-          </p>
+            <label for="project-type"> Project Type </label>
+            <select name="project-type" id="project-type" required>
+              <option value="" disabled selected>Select project type...</option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="renovation">Renovation</option>
+              <option value="new-build">New Build</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="message"> Project Details (Optional) </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Tell us about your project..."
+            ></textarea>
+            <button type="submit" class="btn-submit-contact">
+              Submit Inquiry
+            </button>
+          </div>
+          <div class="contact-us-image"></div>
         </div>
       </section>
     </main>

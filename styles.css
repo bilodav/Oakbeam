@@ -1488,7 +1488,7 @@ textarea {
 @media (min-width: 176px) {
  /* body {background-color: green;} */
   footer{
-    width: 100%;
+    max-width: 100%;
     min-height: 15vh;
     display: flex;
     flex-direction: row;

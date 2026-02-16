@@ -175,3 +175,15 @@ for(let i = 0; i < ppButton.length; i++){
         }
     })
 }
+
+// Contact-us image styling
+
+const contactUsImage = document.querySelector(".contact-us-image");
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth < 768) {
+        contactUsImage.classList.add("hidden")
+    } else if (window.innerWidth > 768){
+        contactUsImage.classList.remove("hidden")
+    }
+});

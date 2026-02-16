@@ -1333,7 +1333,7 @@ select:invalid {
 }
 
 
-input, textarea, select {
+input, select {
   background: #f8f9fa;
   padding: 10px;
   padding-left: 20px;
@@ -1353,11 +1353,17 @@ input:focus, textarea:focus, select:focus {
 }
 
 textarea {
+  background: #f8f9fa;
+  padding: 15px 10px 15px 20px; /* top, right, bottom, left */
   height: auto;
   min-height: 100px;
   resize: vertical;
-  padding-top: 15px; 
+  font-size: 14px;
+  font-family: var(--font-body);
   border-radius: var(--radius-lg);
+  border: none;
+  box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.9);
 }
 
 .btn-submit-contact {

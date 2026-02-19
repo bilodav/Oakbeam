@@ -1204,18 +1204,17 @@ nav {
 @media (min-width: 176px) {
  /* body {background-color: rgba(117, 161, 117, 0.484);} */
     #building-tracker {
-      min-height: 200vh;;
+      min-height: 200vh;
     }   
     #building-tracker h2{
       width: 75%;
       font-size: 2.8rem;
-      margin: 6rem auto
+      margin: 6rem auto;
     }
 
     .building-tracker-card-container{
       display:grid;
-      grid-template-columns: 1fr 1.4fr 1fr;
-      grid-template-rows: auto;
+      grid-template-rows: 50vh 100vh 50vh;
       width:80%;
       height: 85vh;
       gap:10px;
@@ -1290,8 +1289,18 @@ nav {
   #building-tracker h2{
   width: 60%;
   font-size: 3.5rem;
-  margin: 3rem 0 4rem 8rem;
+  margin: 0rem 0 4rem 8rem;
 }
+
+.building-tracker-card-container{
+      display:grid;
+      grid-template-columns: 1fr 1.4fr 1fr;
+      grid-template-rows: auto;
+      width:80%;
+      height: 85vh;
+      gap:10px;
+      margin: 0 auto;
+    }
 
 
 }
@@ -1302,7 +1311,7 @@ nav {
   #building-tracker h2{
   width: 60%;
   font-size: 4.0rem;
-  margin: 3rem auto 4rem 14rem;
+  margin: 0rem auto 4rem 14rem;
 }
 
 }
@@ -1327,12 +1336,16 @@ nav {
 @media (min-width: 176px) {
  /* body {background-color: rgba(117, 161, 117, 0.484);} */
     #contact-us {
-      min-height: 100vh;;
+      min-height: 100vh;
+      padding-top: 4rem;
     }   
+    
     #contact-us h2{
       width: 75%;
       font-size: 2.8rem;
-      margin: 6rem auto
+      margin: 6rem auto;
+      padding-top: 30rem;
+
     }
     
     .contact-us-container{
@@ -1476,7 +1489,9 @@ textarea {
   #contact-us h2{
   width: 60%;
   font-size: 3.5rem;
-  margin: 3rem 0 4rem 8rem;
+  margin: 1rem 0 4rem 8rem;
+  padding-top: 0rem;
+
 }
 
 .contact-us-image {
@@ -1525,36 +1540,6 @@ textarea {
 }
 
  } 
-
-
-
-
-/* Scroll reveal animation for H2 text */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.scroll-reveal  span{
-  color: hsla(0, 13%, 9%, 0.1);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(90deg, var(--text-primary), var(--text-primary));
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-  animation-range-start: cover 20vw;
-  animation-range-end: cover 50vw;
-
-}
-
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-  }
-  
-}
-
-.hidden {
-  display: none;
-}
 
 
 /* FOOTER STYLING */
@@ -1672,6 +1657,39 @@ textarea {
   }
 }
   
+
+
+
+
+
+/* Scroll reveal animation for H2 text */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.scroll-reveal  span{
+  color: hsla(0, 13%, 9%, 0.1);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, var(--text-primary), var(--text-primary));
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover 20vw;
+  animation-range-end: cover 50vw;
+
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+  
+}
+
+.hidden {
+  display: none;
+}
+
+
 
 
 /* Large devices (desktops, 992px and up) */

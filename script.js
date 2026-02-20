@@ -123,6 +123,44 @@ function updateActiveSection(){
         if (href === `#${currentSection}`){
             link.classList.add("active")
         }
+
+        const sectionIdentifier = document.querySelector(".section-identifier")
+    if (window.innerWidth < 968) {
+        // sectionIdentifier.textContent=currentSection;
+
+        if(currentSection === "home-banner"){
+        sectionIdentifier.textContent="Home"} else if (
+            currentSection === "services"
+        ){
+            sectionIdentifier.textContent="Services"
+        }  else if (
+            currentSection === "about-us"
+        ){
+            sectionIdentifier.textContent="About"
+        }   else if (
+            currentSection === "past-projects"
+        ){
+            sectionIdentifier.textContent="Projects"
+        } else if (
+            currentSection === "news"
+        ){
+            sectionIdentifier.textContent="News"
+        }  else if (
+            currentSection === "building-tracker"
+        ){
+            sectionIdentifier.textContent="Tracker"
+        } else if (
+            currentSection === "contact-us"
+        ){
+            sectionIdentifier.textContent="Contact"
+        }
+
+
+
+    } else{
+        sectionIdentifier.textContent="Contact Us"
+    }
+
     })
 }
 

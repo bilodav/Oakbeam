@@ -55,6 +55,7 @@ function handleNavbarResize() {
         burgerMenu.classList.remove("hidden");
         navBarList.classList.add("hidden");
         navBarIdentifier.classList.add("nav-center");
+        updateActiveSection();
         
 
 
@@ -64,6 +65,7 @@ function handleNavbarResize() {
         navBarList.classList.remove("hidden");
         navBarIdentifier.classList.remove("hidden");
         navBarIdentifier.classList.remove("nav-center");
+        updateActiveSection()
 
     }
 }

@@ -47,6 +47,10 @@ window.addEventListener("scroll", () => {
 const  burgerMenu = document.querySelector(".burger-menu");
 const  navBarList = document.querySelector(".nav-list");
 const  navBarIdentifier = document.querySelector(".section-identifier");
+const  smallScreenMenu = document.querySelector(".small-screen-menu");
+const  smallScreenMenuItem =document.querySelectorAll(".small-screen-menu div");
+
+console.log(smallScreenMenuItem)
 
 
 function handleNavbarResize() {
@@ -56,6 +60,7 @@ function handleNavbarResize() {
         navBarList.classList.add("hidden");
         navBarIdentifier.classList.add("nav-center");
         updateActiveSection();
+  
         
 
 
@@ -76,17 +81,48 @@ handleNavbarResize();
 // Run on window resize
 window.addEventListener("resize", handleNavbarResize);
 
-// handle animation for click on burger menu
+// handle animation for click on burger menu and bring on menu
 
 
-burgerMenu.addEventListener("click", ()=>{
+burgerMenu.addEventListener("click", (e)=>{
+    e.stopPropagation();
     if (!burgerMenu.classList.contains("active")){
         
         burgerMenu.classList.add("active");
+  
+        smallScreenMenu.classList.remove("hidden");
     } else if (burgerMenu.classList.contains("active")) {
         
         burgerMenu.classList.remove("active");
+
+        smallScreenMenu.classList.add("hidden");
+
     }
+} )
+
+smallScreenMenuItem.forEach((item)=>{
+    item.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        let link = item.querySelector("a");
+        window.location.href =link.getAttribute("href");
+        smallScreenMenu.classList.add("hidden");
+        burgerMenu.classList.remove("active");
+
+
+
+    })
+})
+
+document.querySelector("body").addEventListener("click", ()=>{
+    smallScreenMenu.classList.add("hidden");
+    burgerMenu.classList.remove("active");
+});
+
+
+navBarIdentifier.addEventListener("click", ()=>{
+    if (navBarIdentifier.textContent==="Contact Us"){
+        window.location.href = "#contact-us"
+    } 
 } )
 
 function updateActiveSection(){
@@ -117,6 +153,21 @@ function updateActiveSection(){
     }
 
     //update of active class on nav links
+        const sectionIdentifier = document.querySelector(".section-identifier")
+
+        smallScreenMenuItem.forEach(
+            link=>{
+                link.classList.remove("hidden");
+                let linkEl = link.querySelector("a");
+                let hrefEl = linkEl.getAttribute("href");
+                if (hrefEl === `#${currentSection}`){
+            link.classList.add("hidden");
+        }
+
+                
+            }
+        )
+
 
     navLinks.forEach(link => {
         link.classList.remove("active");
@@ -126,7 +177,6 @@ function updateActiveSection(){
             link.classList.add("active")
         }
 
-        const sectionIdentifier = document.querySelector(".section-identifier")
     if (window.innerWidth < 968) {
         // sectionIdentifier.textContent=currentSection;
 

@@ -503,6 +503,42 @@ nav {
   transform: translateY(-9px) rotate(-45deg);
 }
 
+.small-screen-menu{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 8.5vh;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-radius: var(--radius-md);
+}
+
+.small-screen-menu div{
+  padding:10px 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  background: var(--bg-accent);
+}
+
+.small-screen-menu div:hover{
+  background:var(--bg-hover);
+  font-size: 1.05rem;
+  text-decoration: underline;
+}
+
+.small-screen-menu a{
+  text-decoration: none;
+  width: 100%;
+  color: var(--text-secondary);
+}
+
+
 
 
 

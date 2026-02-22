@@ -149,8 +149,8 @@ function updateActiveSection(){
 
     // If at the very top of page, highlight home
     if (window.scrollY < 100 ){
-        currentSection = "home-banner"
-    }
+        currentSection = "home-banner";
+    } 
 
     //update of active class on nav links
         const sectionIdentifier = document.querySelector(".section-identifier")

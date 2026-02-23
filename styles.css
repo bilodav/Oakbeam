@@ -398,7 +398,7 @@ nav {
 .nav-left .brand {
   font-family: var(--font-heading); /* or keep --font-body if preferred */
   font-weight: var(--font-weight-bold);
-  font-size: 2rem;
+  font-size: 150%;
   color: var(--text-secondary);                     /* change to var(--text-white) */
   padding: 0;                       /* cleaner look */
 }
@@ -452,13 +452,13 @@ nav {
   font-weight: var(--font-weight-medium);
   font-size: 1.15rem;
   
+  
 }
 
 
 .btn-outline-nav {
   background-color: var(--btn-outline-bg);
   color: var(--text-secondary);
-  width: 5.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -484,9 +484,10 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30px;
+  width: auto;
   height: auto;
-  gap:4px;
+  gap:3px;
+  padding: 10px 6px;
 }
 
 .burger-menu > span {

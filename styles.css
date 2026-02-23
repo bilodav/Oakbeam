@@ -641,9 +641,10 @@ nav {
   font-family: var(--font-body);
   font-size: 1.05rem;
   font-weight: var(--font-weight-medium);
-  line-height: 1.2;
-  max-width: 70%;
-  margin: 15% 0 ;
+  line-height: 1.7;
+ width: 70%;
+  margin: 15% auto ;
+  text-align: center;
   color: #ffffff;
   z-index: 2;
   text-shadow: 
@@ -673,6 +674,36 @@ nav {
   height: 50%;
   width: 100%;
 }
+
+.content-overlay-top, .content-overlay-bottom{
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+
+.content-overlay-top.active,
+.content-overlay-bottom.active {
+    transform: scaleX(1);
+}
+
+.content-overlay-bottom.active {
+    transform: scaleX(1);
+    transition-delay: 0.1s;
+}
+
+.services-card p {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: 0.2s;
+}
+
+.services-card p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {

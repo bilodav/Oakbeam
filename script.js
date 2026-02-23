@@ -215,6 +215,7 @@ function updateActiveSection(){
 
     })
 }
+ 
 
 // Optional: Smooth scroll enhancement (already have scroll-behavior: smooth in CSS)
 // But this adds a click handler to update immediately
@@ -226,6 +227,37 @@ document.querySelectorAll('.nav-center a[href^="#"]').forEach(link => {
         this.classList.add('active');
     });
 });
+
+// Services Animation Handling
+
+
+const servicesCard = document.querySelectorAll(".services-card");
+
+
+servicesCard.forEach(card =>{
+    card.addEventListener("mouseover",(e)=>{
+        let card = e.currentTarget;
+        let p = card.querySelector("p");
+        let topOverlay = card.querySelector(".content-overlay-top");
+        let bottomOverlay = card.querySelector(".content-overlay-bottom");
+        p.classList.add("visible");
+        topOverlay.classList.add("active");
+        bottomOverlay.classList.add("active");
+
+        
+    })
+
+    card.addEventListener("mouseout",(e)=>{
+        let card = e.currentTarget;
+        let p = card.querySelector("p");
+        let topOverlay = card.querySelector(".content-overlay-top");
+        let bottomOverlay = card.querySelector(".content-overlay-bottom");
+        p.classList.remove("visible");
+        topOverlay.classList.remove("active");
+        bottomOverlay.classList.remove("active");
+        
+    })
+})
 
 
 // Past projects card opening

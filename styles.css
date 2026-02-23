@@ -596,6 +596,7 @@ nav {
   min-height: 70vh;
   min-width: 90%;
   cursor: pointer;
+  position: relative;
 }
 
 .services-card:nth-of-type(1){
@@ -603,6 +604,7 @@ nav {
     background-image: url("./public/images/engineering_card.jpg");
     background-size: cover;
     background-position: center;
+    
     
     
 }
@@ -631,7 +633,45 @@ nav {
     letter-spacing: 1px;
     align-self: flex-start;
     margin-top: 1.2rem;
+    z-index: 2;
 }
+}
+
+#services .services-card p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  max-width: 70%;
+  margin: 15% 0 ;
+  color: #ffffff;
+  z-index: 2;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.9),
+    1px 1px 12px rgba(0, 0, 0, 0.7);
+}
+
+
+.content-overlay-top {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  position: absolute;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+
+  top:0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+}
+
+.content-overlay-bottom {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  position: absolute;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg) ;
+
+  top:50%;
+  left: 0;
+  height: 50%;
+  width: 100%;
 }
 
 /* Medium devices (tablets, 768px and up) */

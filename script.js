@@ -309,3 +309,12 @@ window.addEventListener("resize", () => {
         contactUsImage.classList.remove("hidden")
     }
 });
+
+
+// Go to login page
+
+    const statusBtn = document.querySelector(".go-to-link");
+
+    statusBtn.addEventListener("click", ()=>{
+        window.location.href= "./login.html"
+    })

@@ -1780,8 +1780,82 @@ textarea {
   }
 }
   
+/* LOGIN HTML */
 
 
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 176px) {
+ /* body {background-color: green;} */
+  .login-container{
+    width:80%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    align-items: center;
+    margin: 100px auto;
+    border: 1px solid lightgray;
+    border-radius: var(--radius-xl);
+
+    background: #f8f9fa;
+    box-shadow: 14px 14px 20px rgba(26, 35, 50, 0.08), -14px -14px 20px rgba(255, 255, 255, 0.9);
+  }
+
+
+
+  .login-form-container{
+    width: 30%;
+    height: auto;
+  }
+  .login-form-container p{
+text-align: center;
+margin: 15px 0;
+font-size: 0.9rem;
+  }
+
+  .login-form-container h1{
+margin: 20px 0 5px;
+  }
+
+  .login-form-container input{
+margin: 20px  0
+  }
+
+  .login-social-icon{
+    height: 1.3rem;
+  width: 1.3rem;
+  display: inline-block;
+  }
+ 
+}
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { */
+ /* body {background-color: rgb(71, 17, 195);} */
+
+/* } */
+  
+
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { */
+ /* body {background-color: rgb(242, 118, 192);} */
+
+/* } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+ body {background-color: rgb(101, 217, 233);}
+  
+} */
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {
+ body {background-color: rgb(144, 111, 221);}
+  
+} */
 
 
 
@@ -1812,27 +1886,13 @@ textarea {
   display: none;
 }
 
+.no-select {
+  user-select: none;
+}
 
 
 
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) { */
- /* body {background-color: rgb(242, 118, 192);} */
 
-/* } */
-
-/* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {
- body {background-color: rgb(101, 217, 233);}
-  
-} */
-
-/* Extra extra large devices (larger desktops, 1400px and up) */
-/* @media (min-width: 1400px) {
- body {background-color: rgb(144, 111, 221);}
-  
-} */
-  
 
 
 
@@ -1868,3 +1928,4 @@ textarea {
  body {background-color: rgb(144, 111, 221);}
   
 } */
+

@@ -1796,7 +1796,7 @@ textarea {
     grid-template-columns: 5% 40% 10% 40% 5%;
     grid-template-rows: 5% 90% 5%;
     margin: 100px auto;
-    border: 1px solid lightgray;
+    border: 1px solid rgba(223, 222, 222, 0.374);
     border-radius: var(--radius-xl);
 
     background: #f8f9fa;
@@ -1826,7 +1826,7 @@ textarea {
   height: 100%;
   background-color: #f1f1f1;
   box-shadow: 6px 6px 12px rgba(26, 35, 50, 0.15), 
-              -6px -6px 12px rgba(255, 255, 255, 0.7);
+              -12px -10px 12px rgba(255, 255, 255, 0.7);
   padding: 0rem;
   box-sizing: border-box;
   position: absolute;        /* ADD */
@@ -1842,17 +1842,17 @@ textarea {
 
 .login-cover-right {
   transform: translateX(0%);
-  border-radius: 160px var(--radius-xl) var(--radius-xl) 160px;
+  border-radius: 150px var(--radius-xl) var(--radius-xl) 150px;
 }
 
 .login-cover-left {
   transform: translateX(-100%);  /* slides to cover left side */
-  border-radius: var(--radius-xl) 160px 160px var(--radius-xl);
+  border-radius: var(--radius-xl) 150px 150px var(--radius-xl);
 }
 
 .login-cover .login-sign-up{
   z-index: 51;
-  width:25%;
+  width:7rem;
   margin: 0 auto;
 
 }
@@ -1860,6 +1860,12 @@ textarea {
 .login-cover h2,
 .login-cover button {
   transition: opacity 0.3s ease;
+}
+
+.login-cover p{
+  padding: 0 50px;
+  width: 65%;
+  text-align: center;
 }
 
   .login-form-container p{
@@ -1901,7 +1907,7 @@ margin: 10px  0
 
 
   .login-cover button{
-    width: 25%;
+    width: 7rem;
     height: 10%;
     font-size: .65rem;
     margin-top: 10px;
@@ -1909,7 +1915,7 @@ margin: 10px  0
   }
 
   .login-cover button:first-of-type{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -1925,30 +1931,60 @@ margin: 10px  0
 }
 
 /* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) { */
+@media (min-width: 768px) {
  /* body {background-color: rgb(71, 17, 195);} */
+  .login-cover-right {
+  border-radius: 100px var(--radius-xl) var(--radius-xl) 100px;
+}
 
-/* } */
+.login-cover-left {
+  border-radius: var(--radius-xl) 100px 100px var(--radius-xl);
+}
+
+}
   
 
 
 /* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) { */
+@media (min-width: 992px) {
  /* body {background-color: rgb(242, 118, 192);} */
+   .login-cover-right {
+  border-radius: 120px var(--radius-xl) var(--radius-xl) 120px;
+}
 
-/* } */
+.login-cover-left {
+  border-radius: var(--radius-xl) 120px 120px var(--radius-xl);
+}
+
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {
- body {background-color: rgb(101, 217, 233);}
+@media (min-width: 1200px) {
+ /* body {background-color: rgb(101, 217, 233);} */
+    .login-cover-right {
+  border-radius: 140px var(--radius-xl) var(--radius-xl) 140px;
+}
+
+.login-cover-left {
+  border-radius: var(--radius-xl) 140px 140px var(--radius-xl);
+}
+
   
-} */
+} 
 
 /* Extra extra large devices (larger desktops, 1400px and up) */
-/* @media (min-width: 1400px) {
- body {background-color: rgb(144, 111, 221);}
+ @media (min-width: 1400px) {
+ /* body {background-color: rgb(144, 111, 221);} */
+     .login-cover-right {
+  border-radius: 152px var(--radius-xl) var(--radius-xl) 152px;
+}
+
+.login-cover-left {
+  border-radius: var(--radius-xl) 152px 152px var(--radius-xl);
+}
+
   
-} */
+}
 
 
 

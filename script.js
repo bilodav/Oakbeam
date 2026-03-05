@@ -298,6 +298,21 @@ for(let i = 0; i < ppButton.length; i++){
     })
 }
 
+// Past projects animation
+
+const ppCards = document.querySelectorAll('.pp-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+      entry.target.classList.add('animated');
+      observer.unobserve(entry.target); // stop watching once animated
+    }
+  });
+}, { threshold: 0.1 });
+
+ppCards.forEach(card => observer.observe(card));
+
 // Contact-us image styling
 
 const contactUsImage = document.querySelector(".contact-us-image");
